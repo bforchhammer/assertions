@@ -19,7 +19,6 @@ defmodule Assertions.Absinthe do
 
   and then all functions in this module will not need the schema passed explicitly into it.
   """
-  if match?({:module, _}, Code.ensure_compiled(Absinthe)) do
     require Assertions
 
     require ExUnit.Assertions
@@ -257,4 +256,3 @@ defmodule Assertions.Absinthe do
       Enum.reduce(overrides, fields, &merge_overrides/2)
     end
   end
-end
